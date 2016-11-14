@@ -19,6 +19,7 @@ RUN ln -s /opt/apache-maven-3.3.9 /opt/maven
 RUN ln -s /opt/maven/bin/mvn /usr/local/bin
 RUN rm -f /tmp/apache-maven-3.3.9.tar.gz
 ENV MAVEN_HOME /opt/maven
+ENV M2_HOME /opt/maven
 
 # remove download archive files
 RUN yum clean all
