@@ -1,0 +1,17 @@
+Maven Base Docker Image
+-----------------------
+
+Building
+~~~~~~~~
+
+`docker build -t base-maven .`
+
+Example Usage
+~~~~~
+
+* `cd [workDir]`
+
+* `docker run --privileged=true -v {backtick}pwd{backtick}:/opt/jboss/myproject base-maven mvn clean install -f /opt/jboss/myproject`
+
+This will execute "mvn clean install" using the container to build the sources in `workDir`.  Note that each run is idempotent and will trigger a build with a fresh, non-cached m2 repository.
+
