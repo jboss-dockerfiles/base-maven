@@ -11,7 +11,7 @@ RUN yum install -y wget && \
     tar xzf /tmp/apache-maven-3.3.9.tar.gz -C /opt/ && \
     ln -s /opt/apache-maven-3.3.9 /opt/maven && \
     ln -s /opt/maven/bin/mvn /usr/local/bin && \
-    rm -f /tmp/apache-maven-3.3.9.tar.gz & \
+    rm -f /tmp/apache-maven-3.3.9.tar.gz && \
     yum clean all
 
 ENV MAVEN_HOME=/opt/maven M2_HOME=/opt/maven
